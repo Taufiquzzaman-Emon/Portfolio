@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Roboto Condensed" , sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 10001;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 12%;
+}
+
+.logo img{
+    max-width: 80%;
+    width: 80px;
+    height: auto;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+}
+.navbar a{
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+    padding: 10px 22px;
+    transition: all .42s;
+}
+.navbar a:hover{
+    color: #723939; 
+    background-image: linear-gradient(45deg, #723939 28%, #071beb 17%, #e7b9fb 100%); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+.navbar .active{
+    color: #723939; 
+    background-image: linear-gradient(45deg, #723939 28%, #071beb 17%, #e7b9fb 100%); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+.header-btn{
+    display: flex;
+    align-items: center;
+}
+
+.nav-btn i{
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.nav-btn{
+   display: flex;
+   align-items: center; 
+   justify-content: center;
+   font-size: 30px;
+   text-transform: capitalize;
+   font-weight: 500;
+   padding: 12px 25px;
+   border-radius: 30px;
+   transition: all .42s;
+   color: #a4efd4;
+   background-image: linear-gradient(45deg, #a4efd4 46%, #ac18c2 28%, #e89a0f 44%); 
+   background-clip: text; 
+   -webkit-background-clip: text; 
+   -webkit-text-fill-color: transparent; 
+}
+.nav-btn:hover{
+    color: #bb84fe; 
+    background-image: linear-gradient(45deg, #bb84fe 69%, #4253b7 34%, #abd364 12%); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+#menu-icon{
+    font-size: 40px;
+    margin-left: 12px;
+    z-index: 10001;
+    cursor: pointer;
+    color: #FFF;
+    display: none;
+}
+
+section{
+    padding: 120px 12% 60px;
+}
+.home{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.home-img img{
+    max-width: 100%;
+    width: 450px;
+    height: auto;
+}
+
+.home-text h4{
+    color: #FFF;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.home-text h1{
+    color: #FFF;
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 12px 0px;
+}
+.home-text h3{
+    color: #FFF;
+    font-size: 28px;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.home-text h4{
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.home-text h3 span{
+    color: #11989b; 
+    background-image: linear-gradient(45deg, #11989b 37%, #19b3b5 59%, #eeb9e1 44%); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+
+.home-text h4 span{
+    color: #11989b; 
+    background-image: linear-gradient(45deg, #11989b 37%, #19b3b5 59%, #eeb9e1 44%); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+
+.home-icon i{
+
+    color: #c1e537; 
+    background-image: linear-gradient(45deg, #c1e537 13%, #603b90 32%, #539bd0 9%); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    font-size: 22px;
+    margin-right: 15px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #f2acac;
+    border-radius: 20px;
+    margin-left: 0;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 40px;
+    transition: all .42s;   
+}
+
+.home-icon i:hover{
+    color: #13900f; 
+    background-image: linear-gradient(45deg, #13900f 24%, #d49375 23%, #6c5e8b 64%); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
