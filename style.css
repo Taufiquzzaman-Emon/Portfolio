@@ -38,11 +38,12 @@ header{
     transition: all .42s;
 }
 .navbar a:hover{
-    color: #723939; 
-    background-image: linear-gradient(45deg, #723939 28%, #071beb 17%, #e7b9fb 100%); 
+    color: #79a6e5; 
+    background-image: linear-gradient(45deg, #79a6e5 26%, #69ba63 27%, #67d9b0 55%); 
     background-clip: text; 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
+   
 }
 .navbar .active{
     color: #723939; 
@@ -100,8 +101,7 @@ section{
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(to top, #f43b47 0%, #453a94 100%);
-    background-position: center;
+    background-image: linear-gradient(45deg, #114998 15%, #073b34 30%, #4d01c8 95%); 
     background-size: cover;
     display: flex;
     align-items: center;
@@ -145,28 +145,27 @@ section{
     text-transform: capitalize;
 }
 .home-text h3 span{
-    color: #11989b; 
-    background-image: linear-gradient(45deg, #11989b 37%, #19b3b5 59%, #eeb9e1 44%); 
+    color: #358cdf; 
+    background-image: linear-gradient(45deg, #358cdf 14%, #eb5715 18%, #a9c31b 100%); 
     background-clip: text; 
     -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;    
 }
 
 .home-text h4 span{
-    color: #11989b; 
-    background-image: linear-gradient(45deg, #11989b 37%, #19b3b5 59%, #eeb9e1 44%); 
+    color: #358cdf; 
+    background-image: linear-gradient(45deg, #358cdf 14%, #eb5715 18%, #a9c31b 100%); 
     background-clip: text; 
     -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;    
 }
 
 .home-icon i{
-
-    color: #c1e537; 
-    background-image: linear-gradient(45deg, #c1e537 13%, #603b90 32%, #539bd0 9%); 
+    color: #57a98f; 
+    background-image: linear-gradient(45deg, #57a98f 46%, #d63895 91%, #02e17a 95%); 
     background-clip: text; 
     -webkit-background-clip: text; 
-    -webkit-text-fill-color: transparent; 
+    -webkit-text-fill-color: transparent;      
     font-size: 22px;
     margin-right: 15px;
     display: inline-flex;
