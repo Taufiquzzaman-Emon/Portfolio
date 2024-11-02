@@ -189,3 +189,82 @@ section{
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
 }
+
+header.sticky{
+    background-image: linear-gradient(45deg, #114998 15%, #073b34 30%, #4d01c8 95%); 
+    padding: 14px 12%;
+    box-shadow: 0px 4px 15px rgb(0 0 0/ 8%);
+    transition: all .42s;
+}
+
+
+.about{
+    background-image: linear-gradient(45deg, #114998 15%, #073b34 30%, #4d01c8 95%); 
+}
+
+.main-about{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.about-image img{
+    max-width: 100%;
+    width: 430px;
+    height: auto;
+    border-radius: 30px;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column; /* Stack text elements vertically */
+    justify-content: flex-start; /* Align items at the start */
+}
+
+.about-text h5{
+    color: #f0eecb; 
+    background-image: linear-gradient(45deg, #f0eecb 28%, #c642fc 44%, #2d4551 65%); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;     
+    font-size: 50px;
+    text-transform: capitalize;
+    font-weight:500;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.about-text h2{
+    color: #d88b2a; 
+    background-image: linear-gradient(225deg, #d88b2a 19%, #934ae8 30%, #03e845 54%, #25fd92 59%); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    font-size: 30px;
+    text-transform: capitalize;
+    font-weight: 700;
+    align-items: flex-end;
+   
+}
+.down-btn {
+    position: fixed; /* Fix the button's position */
+    bottom: 20px; /* Adjust this value to set the vertical position */
+    right: 20px; /* Adjust this value to set the horizontal position */
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.down-btn .dn-btn {
+    display: inline-block; /* Make the button display as a block */
+    padding: 10px 15px; /* Add padding */
+    color: black; 
+    background-image: linear-gradient(90deg, #1582d7 47%, #39e7a9 91%, #cbf379 82%, #d1214f 97%); 
+    text-decoration: none; /* Remove underline */
+    border-radius: 20px; /* Rounded corners */
+    font-size: 15px;
+}
+
+.down-btn .dn-btn:hover {
+    background-image: linear-gradient(45deg, #b7eae4 39%, #e876e1 43%, #a726a0 52%, #adebd1 56%); 
+
+}
