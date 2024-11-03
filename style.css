@@ -25,17 +25,47 @@ header{
     width: 80px;
     height: auto;
 }
+
+.logo{
+    animation: slideRight 1s ease-in forwards;
+    position: relative;
+}
+
+@keyframes slideRight{
+    0%{transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
 .navbar{
     display: flex;
     align-items: center;
 }
 .navbar a{
     color: #FFF;
+    display: inline-block;
     font-size: 18px;
     font-weight: 400;
     text-transform: capitalize;
     padding: 10px 22px;
-    transition: all .42s;
+    transition: .3s;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s*var(--i));
+}
+
+@keyframes slideTop{
+    0%{transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 .navbar a:hover{
     color: #79a6e5; 
@@ -77,6 +107,17 @@ header{
    background-clip: text; 
    -webkit-background-clip: text; 
    -webkit-text-fill-color: transparent; 
+   animation: slideLeft 1s ease-in forwards;
+}
+
+@keyframes slideLeft{
+    0%{transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
 .nav-btn:hover{
     color: #bb84fe; 
@@ -129,6 +170,17 @@ section{
     font-weight: 700;
     text-transform: uppercase;
     margin: 12px 0px;
+    animation: slideRight2 1s ease-in forwards;
+}
+
+@keyframes slideRight2{
+    0%{transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
 .home-text h3{
     color: #FFF;
@@ -136,6 +188,18 @@ section{
     font-weight: 700;
     text-transform: capitalize;
     margin-bottom: 20px;
+    animation: slideBottom2 0.7s ease-in forwards;
+    animation-delay: .20s;
+}
+
+@keyframes slideBottom2{
+    0%{transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 
 .home-text h4{
@@ -143,7 +207,23 @@ section{
     font-size: 20px;
     font-weight: 500;
     text-transform: capitalize;
+    letter-spacing: 2px;
+    animation: slideBottom 0.5s ease-in forwards;
 }
+
+
+
+@keyframes slideBottom{
+    0%{transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
 .home-text h3 span{
     color: #358cdf; 
     background-image: linear-gradient(45deg, #358cdf 14%, #eb5715 18%, #a9c31b 100%); 
@@ -179,7 +259,25 @@ section{
     margin-top: 40px;
     margin-bottom: 40px;
     margin-right: 40px;
-    transition: all .42s;   
+    transition: all .42s; 
+    opacity: 0; 
+    animation: HI 1s ease forwards; 
+    animation-delay: calc(.2s*var(--i));
+}
+
+@keyframes HI{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+
 }
 
 .home-icon i:hover{
@@ -247,24 +345,37 @@ header.sticky{
     align-items: flex-end;
    
 }
-.down-btn {
-    position: fixed; /* Fix the button's position */
-    bottom: 20px; /* Adjust this value to set the vertical position */
-    right: 20px; /* Adjust this value to set the horizontal position */
-    z-index: 1000; /* Ensure it's above other elements */
+.dn-btn{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 500;
+    animation: CV 2s ease forwards;
+    animation-delay: calc(.2s*var(--i));
+    opacity: 0;
 }
 
-.down-btn .dn-btn {
-    display: inline-block; /* Make the button display as a block */
-    padding: 10px 15px; /* Add padding */
-    color: black; 
-    background-image: linear-gradient(90deg, #1582d7 47%, #39e7a9 91%, #cbf379 82%, #d1214f 97%); 
-    text-decoration: none; /* Remove underline */
-    border-radius: 20px; /* Rounded corners */
-    font-size: 15px;
+@keyframes CV{
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 
-.down-btn .dn-btn:hover {
-    background-image: linear-gradient(45deg, #b7eae4 39%, #e876e1 43%, #a726a0 52%, #adebd1 56%); 
-
+.dn-btn:hover{
+    box-shadow: 0 0 5px cyan,
+    0 0 25px cyan,0 0 50px cyan,
+    0 0 100px cyan,0 0 200px cyan
 }
