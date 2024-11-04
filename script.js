@@ -79,3 +79,13 @@ function handleScrollAnimation() {
 
 // Attach the scroll event listener
 window.addEventListener('scroll', handleScrollAnimation);
+
+window.addEventListener('load', () => {
+    document.querySelectorAll('.progressLine span').forEach((bar, index) => {
+        // Set the width based on the percentage after a delay
+        setTimeout(() => {
+            const percentage = bar.getAttribute('data-progress');
+            bar.style.width = percentage;
+        }, index * 300); // Delays each bar by 300ms
+    });
+});
