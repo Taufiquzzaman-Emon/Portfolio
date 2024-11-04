@@ -9,7 +9,7 @@
 }
 
 body{
-    background-image: linear-gradient(45deg, #114998 15%, #073b34 30%, #4d01c8 95%); 
+    background: linear-gradient(109.6deg, rgb(0, 0, 0) 11.2%, rgb(11, 132, 145) 91.1%);
 }
 
 header {
@@ -34,13 +34,36 @@ header {
     width: 80px;
     height: auto;
 }
-
-.logo{
-    animation: slideRight 1s ease-in forwards;
-    position: relative;
+.logo {
+    animation: slideRight 1s ease-in forwards;/* Slide-in and dynamic shadow animation */
+    position: relative; /* Position for shadow effect */
+    max-width: 80%; /* Limit width */
+    font-size: 20px; /* Adjust font size as needed */
+    background-image: linear-gradient(45deg, #8cfef5 98%, #151d0a 54%, #9f3046 21%, #8eebf4 28%); 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+    
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2), /* Initial shadow effect */
+                 4px 4px 0 rgba(0, 0, 0, 0.15),
+                 6px 6px 0 rgba(0, 0, 0, 0.1);
 }
 
-@keyframes slideRight{
+/* Slide-in animation */
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100%); /* Start off-screen */
+        opacity: 0; /* Start invisible */
+    }
+    50% {
+        opacity: 0.5; /* Fade in halfway */
+    }
+    100% {
+        transform: translateX(0); /* End at original position */
+        opacity: 1; /* Fully visible */
+    }
+}
+/* @keyframes slideRight{
     0%{transform: translateX(-100px);
         opacity: 0;
     }
@@ -48,7 +71,7 @@ header {
         transform: translateX(0px);
         opacity: 1;
     }
-}
+} */
 
 .navbar{
     display: flex;
@@ -316,10 +339,6 @@ header.sticky{
 }
 
 
-.about{
-    background-image: linear-gradient(45deg, #114998 15%, #073b34 30%, #4d01c8 95%); 
-}
-
 .main-about{
     display: grid;
     grid-template-columns: auto 1fr;
@@ -478,10 +497,20 @@ header.sticky{
     background-clip: text; 
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
-   
+    animation: heading1 2s ease-in forwards;
     text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.4);
 }
 
+@keyframes heading1 {
+    0% {
+        transform: translateZ(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateZ(0px);
+        opacity: 1;
+}
+}
 /* Skill Bar Styling */
 .technical-bars {
     width: 100%;
