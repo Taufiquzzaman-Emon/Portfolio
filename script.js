@@ -36,9 +36,46 @@ var typed = new Typed(".input2",{
     showCursor:true
 })
 
+document.addEventListener("DOMContentLoaded", function() {
+    const skillBars = document.querySelectorAll(".bar");
 
-const header = document.querySelector("header");
+    // Add the `inactive` class to each bar initially
+    skillBars.forEach(bar => bar.classList.add("inactive"));
 
-window.addEventListener("scroll",function(){
-    header.classList.toggle("sticky",this.window.scrollY>0)
-})
+    // Create an IntersectionObserver to watch the skill bars
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active"); // Start animation
+                entry.target.classList.remove("inactive"); // Remove inactive class
+            } else {
+                entry.target.classList.remove("active"); // Remove active class to reset animation
+                entry.target.classList.add("inactive"); // Add inactive class to reset
+            }
+        });
+    }, {
+        threshold: 0.2 // Trigger when 20% of the section is in view
+    });
+
+    // Observe each skill bar
+    skillBars.forEach((bar) => observer.observe(bar));
+});
+
+function handleScrollAnimation() {
+    const skillsHeading = document.querySelector('.my-skills');
+    const rect = skillsHeading.getBoundingClientRect();
+    
+    // Check if the element is in the viewport
+    if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+        // Add the animation class
+        skillsHeading.style.opacity = '1'; // Make it visible
+        skillsHeading.style.animation = 'fadeInUp 0.6s forwards'; // Apply animation
+    } else {
+        // Reset the heading to hidden when not in view
+        skillsHeading.style.opacity = '0'; // Hide it
+        skillsHeading.style.animation = 'none'; // Reset animation
+    }
+}
+
+// Attach the scroll event listener
+window.addEventListener('scroll', handleScrollAnimation);

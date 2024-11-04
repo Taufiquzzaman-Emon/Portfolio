@@ -8,6 +8,10 @@
     text-decoration: none;
 }
 
+body{
+    background-image: linear-gradient(45deg, #114998 15%, #073b34 30%, #4d01c8 95%); 
+}
+
 header{
     position: fixed;
     width: 100%;
@@ -141,7 +145,6 @@ section{
     position: relative;
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(45deg, #114998 15%, #073b34 30%, #4d01c8 95%); 
     background-size: cover;
     display: flex;
     align-items: center;
@@ -391,3 +394,180 @@ header.sticky{
     0 0 25px cyan,0 0 50px cyan,
     0 0 100px cyan,0 0 200px cyan
 }
+
+/* Skills Section Styling */
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px); /* Slide up */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Original position */
+    }
+}
+.my-skills {
+    color: #f0eecb;
+    background-image: linear-gradient(45deg, #f0eecb 28%, #c642fc 44%, #2d4551 65%);
+    background-clip: text;
+    font-size: 50px;
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-top: 10%;
+    margin-bottom: 20px; /* Adjust as needed */
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    animation: skills 1s ease-in forwards; /* Optional initial animation */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+}
+
+.my-skills span{
+    color: #08AEEA;
+}
+
+@keyframes skills{
+    0%{
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.container {
+    width: 900px;
+    height: 700px;
+    padding: 75px 90px;
+    margin-top: -10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.heading {
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+    color: white;
+    font-size: 30px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+
+/* Skill Bar Styling */
+.technical-bars {
+    width: 100%; /* Ensures container spans the section */
+}
+
+.technical-bars .bar {
+    display: flex;
+    flex-direction: column; /* Stacks icon, text, and bar */
+    align-items: flex-start;
+    margin: 20px 0; /* Adds spacing between skill bars */
+    width: 100%; /* Expands each bar container fully */
+}
+
+
+.technical-bars .bar .info {
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+     width: 100%;
+}
+
+.technical-bars .bar i {
+    font-size: 40px; /* Adjust this value to increase the size of the icons */
+    margin-right: 10px; /* Space between icon and text */
+    color: #E44D26; /* Maintain the color you set inline */
+}
+
+.technical-bars .bar .info span {
+    font-size: 17px;
+    font-weight: 500;
+    color: white; /* Text color */
+    animation: showText 0.5s 1s linear forwards;
+    opacity: 0;
+}
+
+.technical-bars .bar .info .percentage {
+    font-size: 17px; /* Ensure the font size matches your design */
+    color: white; /* Text color */
+    margin-left: auto; /* Aligns percentage to the right */
+}
+
+
+/* Progress Line Styles */
+.technical-bars .bar .progressLine {
+    position: relative;
+    border-radius: 10px;
+    width: 100%; /* Full width of container */
+    height: 8px;
+    background-color: #e0e0e0; /* Light background for contrast */
+    overflow: hidden; /* Prevent overflow */
+    transform: scaleX(1); /* Prevents scaleX animation collapse */
+}
+
+
+.technical-bars .bar .progressLine span {
+    display: block;
+    height: 100%;
+    border-radius: 10px;
+    transform: scaleX(0); /* Hidden by default */
+    transform-origin: left; /* Animation grows from the left */
+    transition: transform 1.5s ease; /* Smooth transition */
+}
+
+.technical-bars .bar.active .progressLine span {
+    transform: scaleX(1); /* Fills the bar to specified width */
+}
+
+/* Individual Skill Progress Line Colors and Widths */
+.progressLine.html span {
+    width: 90%;
+    background-color: #E44D26;
+    box-shadow: 0 0 10px rgba(228, 77, 38, 0.6);
+}
+
+.progressLine.css span {
+    width: 80%;
+    background-color: #264DE4;
+    box-shadow: 0 0 10px rgba(38, 77, 228, 0.6);
+}
+
+.progressLine.js span {
+    width: 25%;
+    background-color: #F0DB4F;
+    box-shadow: 0 0 10px rgba(240, 219, 79, 0.6);
+}
+
+.progressLine.python span {
+    width: 85%;
+    background-color: #306998;
+    box-shadow: 0 0 10px rgba(48, 105, 152, 0.6);
+}
+
+.progressLine.cpp span {
+    width: 70%;
+    background-color: #00599C;
+    box-shadow: 0 0 10px rgba(0, 89, 156, 0.6);
+}
+
+/* Text Animation for Skill Names */
+@keyframes showText {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animation for Progress Bars */
+@keyframes fillBar {
+    to {
+        transform: scaleX(1); /* Fills bar to defined width */
+    }
+}
+
