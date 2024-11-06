@@ -23,8 +23,6 @@ var typed = new Typed(".input2", {
   showCursor: true,
 });
 
-
-
 document.addEventListener("DOMContentLoaded", function () {
   const skillBars = document.querySelectorAll(".bar");
 
@@ -188,5 +186,3 @@ document
         }
       );
   });
-
-  
