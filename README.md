@@ -16,4 +16,4 @@ Welcome to my portfolio! This repository showcases my projects and skills in web
 ## How to View My Portfolio  
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/your-username/portfolio.git
+   git clone https://github.com/Taufiquzzaman-Emon/Portfolio.git
