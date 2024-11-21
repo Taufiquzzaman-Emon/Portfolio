@@ -9,7 +9,7 @@ Welcome to my portfolio! This repository showcases my projects and skills in web
 
 ## Projects Included  
 1. **To-Do List Application:** A task management tool.  
-2. **Simon Says Game:**A memory and attention game built with HTML, CSS, and JavaScript, featuring dynamic levels, high score tracking, and interactive visuals.
+2. **Simon Says Game:** A memory and attention game built with HTML, CSS, and JavaScript, featuring dynamic levels, high score tracking, and interactive visuals.
 
 ## Technologies Used  
 - **Frontend:** HTML5, CSS3, JavaScript 
